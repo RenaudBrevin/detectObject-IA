@@ -1,6 +1,7 @@
 let video
 let detector
 let detections = []
+let donnees = ['chair','person', 'cell phone']
 
 let link = "https://www.recettes-dessert.fr/files/2019/01/Capture-1.png"
 
@@ -16,6 +17,7 @@ function gotResults(error, results){
     }
     detections = results
     detector.detect(video, gotResults)
+    CheckObject();
 }
 
 function videoLoaded() {
@@ -45,3 +47,33 @@ function draw() {
         rect(object.x, object.y, object.width, object.height)
     }
 }
+
+//Commence et change l'objet à trouver
+function ChangeObject(){
+    let random = Math.floor(Math.random() * donnees.length)
+    let object = donnees[random];
+    document.getElementById("change").innerHTML = "";
+    document.getElementById("change").innerHTML = "Changer d'objet";
+
+    document.getElementById("objet").innerHTML = "";
+    document.getElementById("phrase").innerHTML = "";
+
+    document.getElementById("phrase").innerHTML = "L'objet à trouver est :";
+    document.getElementById("objet").innerHTML = object;
+    console.log(object)
+}
+
+//fonction qui vérifie si l'objet est trouvé
+function CheckObject() {
+    let object = document.getElementById("objet").innerHTML;
+    for (let i = 0; i < detections.length; i++) {
+        if (detections[i].label == object) {
+            console.log("L'objet a été trouvé !");
+            ChangeObject();
+            break;
+        }
+    }
+}
+
+
+
