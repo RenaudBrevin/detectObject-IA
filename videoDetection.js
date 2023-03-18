@@ -50,17 +50,32 @@ function draw() {
 
 //Commence et change l'objet à trouver
 function ChangeObject(){
-    let random = Math.floor(Math.random() * donnees.length)
-    let object = donnees[random];
-    document.getElementById("change").innerHTML = "";
-    document.getElementById("change").innerHTML = "Changer d'objet";
+    nombre = false;
+    if (donnees.length == 0) {
+        document.getElementById("phrase").innerHTML = "Félicitation vous avez trouvé tous les objets !";
+        document.getElementById("objet").innerHTML = "";
+        //creation bouton html qui au click active une fonction "recommencer"
+        document.getElementById("change").innerHTML = "";
+        document.getElementById("change").innerHTML = "<button onclick='Recommencer()'>Réinitialiser</button>";
+        nombre = true;
+    }
 
-    document.getElementById("objet").innerHTML = "";
-    document.getElementById("phrase").innerHTML = "";
+    if(nombre == false){
+        let random = Math.floor(Math.random() * donnees.length)
+        let object = donnees[random];
 
-    document.getElementById("phrase").innerHTML = "L'objet à trouver est :";
-    document.getElementById("objet").innerHTML = object;
-    console.log(object)
+        document.getElementById("change").innerHTML = "";
+        document.getElementById("change").innerHTML = "Changer d'objet";
+
+        document.getElementById("objet").innerHTML = "";
+        document.getElementById("phrase").innerHTML = "";
+
+        document.getElementById("phrase").innerHTML = "L'objet à trouver est :";
+        document.getElementById("objet").innerHTML = object;
+
+        donnees.splice(random, 1);
+        console.log(object)
+    }
 }
 
 //fonction qui vérifie si l'objet est trouvé
@@ -75,5 +90,7 @@ function CheckObject() {
     }
 }
 
-
+function Recommencer(){
+    location.reload();
+}
 
