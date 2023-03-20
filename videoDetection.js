@@ -1,7 +1,7 @@
 let video;
 let detector;
 let detections = [];
-let donnees = ['chair','person', 'cell phone', 'cup', 'bottle', 'book', 'laptop', 'glasses'];
+let donnees = ['chair','person', 'cell phone', 'cup', 'bottle', 'book', 'laptop', 'glasses', 'pen', 'shoes', 'mouse', 'remote', ];
 
 let link = "https://www.recettes-dessert.fr/files/2019/01/Capture-1.png";
 

@@ -29,7 +29,7 @@ body .headerContainer h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-body .headerContainer button {
+body .headerContainer #change {
   font-size: 1rem;
   font-weight: bold;
   color: white;
@@ -42,7 +42,16 @@ body .headerContainer button {
   box-shadow: 0px 5px 0px #23196a;
   transition: all 0.3s ease-in-out;
 }
-body .headerContainer button:hover {
+body .headerContainer #change button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #3927b0;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+body .headerContainer #change:hover {
   transform: translateY(-5px);
   box-shadow: 0px 8px 0px #23196a;
 }

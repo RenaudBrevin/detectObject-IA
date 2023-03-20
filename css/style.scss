@@ -1,16 +1,12 @@
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-// faire un design cartoon avec des couleurs flashy et pastel pour le site qui est un jeu 
 body{
     width: 100%;
     height: 100vh;
-    //background: linear-gradient(0deg, rgba(72,157,228,1) 0%, rgba(13,222,235,1) 100%);
-
     font-family: 'catseye', sans-serif;
     font-size: 16px;
     color: #000000;
@@ -33,7 +29,7 @@ body{
             -webkit-text-fill-color: transparent;
         }
         
-        button {
+        #change{
             font-size: 1rem;
             font-weight: bold;
             color: white;
@@ -45,9 +41,18 @@ body{
             letter-spacing: 2px;
             box-shadow: 0px 5px 0px #23196a;
             transition: all 0.3s ease-in-out;
+            button{
+                font-size: 1rem;
+                font-weight: bold;
+                color: white;
+                background-color: #3927b0;
+                border: none;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
         }
         
-        button:hover {
+        #change:hover {
             transform: translateY(-5px);
             box-shadow: 0px 8px 0px #23196a;
         }
