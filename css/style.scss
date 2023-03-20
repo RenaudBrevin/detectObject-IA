@@ -1,0 +1,79 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// faire un design cartoon avec des couleurs flashy et pastel pour le site qui est un jeu 
+body{
+    width: 100%;
+    height: 100vh;
+    //background: linear-gradient(0deg, rgba(72,157,228,1) 0%, rgba(13,222,235,1) 100%);
+
+    font-family: 'catseye', sans-serif;
+    font-size: 16px;
+    color: #000000;
+    background: linear-gradient(45deg, #33ccff, #dfdfdf);
+    .headerContainer{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 10px;
+        h1 {
+            font-family: "marvin", sans-serif;
+            font-size: 3rem;
+            font-weight: bold;
+            //text-stroke: 2px #000;
+            -webkit-text-stroke: 0.5px #0a0a0ac9;
+            background: linear-gradient(to right, #ff00cc, #333399);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        button {
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: #3927b0;
+            border: none;
+            border-radius: 20px;
+            padding: 15px 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0px 5px 0px #23196a;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 0px #23196a;
+        }
+        
+    }
+    .objectContainer{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        #objet{
+            font-family: "marvin-shadow", sans-serif;
+            font-size: 26px;
+        }
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        #canvasContainer{
+            background: linear-gradient(0deg, rgba(193,106,213,1) 0%,       rgba(53,37,175,1) 100%);
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            padding: 20px;
+        }
+    }
+}
+

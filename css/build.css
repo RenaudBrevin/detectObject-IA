@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "catseye", sans-serif;
+  font-size: 16px;
+  color: #000000;
+  background: linear-gradient(45deg, #33ccff, #dfdfdf);
+}
+body .headerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+body .headerContainer h1 {
+  font-family: "marvin", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  -webkit-text-stroke: 0.5px rgba(10, 10, 10, 0.7882352941);
+  background: linear-gradient(to right, #ff00cc, #333399);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body .headerContainer button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #3927b0;
+  border: none;
+  border-radius: 20px;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0px 5px 0px #23196a;
+  transition: all 0.3s ease-in-out;
+}
+body .headerContainer button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 0px #23196a;
+}
+body .objectContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+body .objectContainer #objet {
+  font-family: "marvin-shadow", sans-serif;
+  font-size: 26px;
+}
+body .container {
+  display: flex;
+  justify-content: center;
+}
+body .container #canvasContainer {
+  background: linear-gradient(0deg, rgb(193, 106, 213) 0%, rgb(53, 37, 175) 100%);
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 20px;
+}
+
+/*# sourceMappingURL=build.css.map */

@@ -2,6 +2,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/build.css">
+    <link rel="stylesheet" href="https://use.typekit.net/uyk1zil.css">
     <title>Jeu d'objet</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
@@ -11,6 +13,17 @@
 
 <body>
     <script src="videoDetection.js"></script>
+    <div class="headerContainer">
+        <h1>CamCatch !</h1>
+        <h2>Le chrono tourne ! Êtes-vous prêt à relever le défi et à récupérer les objets aussi vite que possible ?!</h2>
+        <button id="change" onclick="ChangeObject()">Commencer le Jeu</button>
+    </div>
+    <div class="objectContainer">
+        <h2 id="phrase"><h1 id="objet"></h1></h2>
+    </div>
+    <div class="container">
+        <div id="canvasContainer"></div>
+    </div>
 </body>
 
 </html>
