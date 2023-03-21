@@ -2,7 +2,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Jeu d'objet</title>
+    <link rel="stylesheet" href="css/build.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>CamCatch</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
@@ -11,10 +15,17 @@
 
 <body>
     <script src="videoDetection.js"></script>
-    <h1>Jeu à plusieurs !</h1>
-    <h2>Trouvez le plus rapidement l'objet demandé et faites le identifié à la caméra pour gagner un point !</h2>
-    <button id="change" onclick="ChangeObject()">Commencer le Jeu</button>
-    <h1 id="phrase"><h1 id="objet"></h1></h1>
+    <div class="headerContainer">
+        <h1>CamCatch !</h1>
+        <h2>Le chrono tourne ! Êtes-vous prêt à relever le défi et à récupérer les objets aussi vite que possible ?!</h2>
+        <button id="change" onclick="ChangeObject()">Commencer le Jeu</button>
+    </div>
+    <div class="objectContainer">
+        <h2 id="phrase"><h1 id="objet"></h1></h2>
+    </div>
+    <div class="container">
+        <div id="canvasContainer"></div>
+    </div>
 </body>
 
 </html>
